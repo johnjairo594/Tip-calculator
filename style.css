@@ -185,6 +185,10 @@ h1{
     cursor: pointer;
 }
 
+#btnReset:hover{
+    background-color: var(--darkest-blue);
+}
+
 @media (min-width:640px) {
     body{
         display: flex;
