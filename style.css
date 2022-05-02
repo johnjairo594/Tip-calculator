@@ -1,0 +1,235 @@
+:root{
+    --Blue: #023E73;
+    --Dark-blue: #024059;
+    --Orange: #BF6415;
+    --Ligth-grey: #D9CCC1;
+    --Brown: #8C503A;
+    --White: #FFFFFF;
+}
+
+*{
+    font-family: 'Space Mono', monospace;
+}
+
+body{
+    background-color: var(--Blue);
+    margin: 0;
+}
+
+h1{
+    color: var(--Orange);
+    text-align: center;
+    line-height: 2rem;
+    letter-spacing: .5rem;
+    font-size: x-large;
+    margin: 2rem;
+}
+
+.container-second{
+    display: flex;
+    flex-direction: column;
+    background-color: var(--White);
+    color: var(--Orange);
+    border-top-left-radius: 2rem;
+    border-top-right-radius: 2rem;
+    padding: 2rem;
+}
+
+.box1{
+    display: flex;
+    flex-direction: column;
+}
+
+.box1 img{
+    position: absolute;
+    width: .8rem;
+    margin: 2.65rem 0 0 .6rem;
+    z-index: 10;
+}
+
+#bill{
+    position: relative;
+    margin: .5rem 0 2rem 0;
+    padding: 0 0.5rem 0 0.5rem;
+    height: 2.5rem;
+    background-color: var(--Ligth-grey);
+    border: none;
+    color: var(--Brown);
+    border-radius: .2rem;
+    font-size: x-large;
+    text-align: right;
+    z-index: 5;
+    padding-right: 1rem;
+}
+
+.box2{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 1rem .5rem;
+    margin-bottom: 1.5rem;
+}
+
+.box2 label {
+    width: 100%;
+}
+
+.btnTip{
+    flex-grow: 1;
+    box-sizing: border-box;
+    color: var(--White);
+    background-color: var(--Orange);
+    border: none;
+    height: 3rem;
+    width: 7rem;
+    border-radius: .3rem;
+    font-size: large;
+    cursor: pointer;
+}
+
+.selected{
+    background-color: var(--Brown);
+}
+
+.btnTip:hover{
+    background-color: var(--Brown);
+}
+
+#custom{
+    background-color: var(--Ligth-grey);
+    box-sizing: border-box;
+    flex-grow: 1;
+    text-align: right;
+    height: 3rem;
+    width: 7rem;
+    border: none;
+    border-radius: .3rem;
+    font-size: x-large;
+    padding-right: 1rem;
+}
+
+.box3{
+    display: flex;
+    flex-direction: column;
+}
+
+#people{
+    position: relative;
+    margin: .5rem 0 2rem 0;
+    padding: 0 0.5rem 0 0.5rem;
+    height: 2.5rem;
+    background-color: var(--Ligth-grey);
+    color: var(--Brown);
+    border: none;
+    border-radius: .2rem;
+    font-size: x-large;
+    text-align: right;
+    z-index: 5;
+    padding-right: 1rem;
+}
+
+#people::-webkit-inner-spin-button, 
+#people::-webkit-outer-spin-button,
+#bill::-webkit-inner-spin-button,
+#bill::-webkit-outer-spin-button,
+#custom::-webkit-inner-spin-button,
+#custom::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+}
+
+.box3 img{
+    position: absolute;
+    width: .9rem;
+    margin: 2.7rem 0 0 .6rem;
+    z-index: 10;
+}
+
+.box4 {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--Brown);
+    border-radius: 1rem;
+    padding: 1.5rem;
+}
+
+.resume{
+    display: flex;
+    justify-content: space-between;
+}
+
+.resume div p:nth-child(1){
+    color: var(--White);
+    margin-bottom: .1rem;
+}
+
+.resume div p:nth-child(2){
+    color: var(--Ligth-grey);
+    font-size: small;
+    margin-top: .1rem;
+}
+
+.resume div:nth-child(2) {
+    color: var(--White);
+    align-self: center;
+    font-size: xx-large;
+}
+
+#btnReset{
+    background-color: var(--Dark-blue);
+    color: var(--Brown);
+    height: 3rem;
+    margin-top: 1.5rem;
+    border: none;
+    border-radius: .4rem;
+    font-size: x-large;
+    cursor: pointer;
+}
+
+@media (min-width:640px) {
+    body{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+    h1{
+        margin-top: 0;
+        margin-bottom: 5rem;
+    }
+    .container-second{
+        flex-direction: row;
+        margin: auto;
+        flex-grow: 1;
+        border-radius: 2rem;
+        gap: 2rem;
+        width: 70%;
+    }
+    .principalbox1{
+        width: 50%;
+    }
+    .box4{
+        
+        width: 40%;
+        justify-content: space-between;
+    }
+    .btnTip{
+        width: 6rem;
+    }
+    #custom{
+        width: 6rem;
+    }
+    .resume{
+        height: 6rem;
+    }
+    #btnReset{
+        height: 3.5rem;
+        margin-bottom: 1.5rem;
+        font-size: xx-large;
+    }
+    @media (max-width:1080px){
+        .container-second{
+            width: 80%;
+        }
+    }
+}
