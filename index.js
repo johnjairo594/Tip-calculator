@@ -65,8 +65,8 @@ tip50.addEventListener('click', () => {
 })
 
 btnReset.addEventListener('click', () => {
-    bill.value = 0;
-    custom.value = 0;
+    bill.value = '';
+    custom.value = '';
     people.value = 1;
     tip50.classList.remove('selected');
     tip10.classList.remove('selected');
@@ -89,15 +89,21 @@ function changeCustomValue(){
 function calcTipAmountAndTotal(){
     billValue   = Number(parseFloat(bill.value).toFixed(2));
     peopleValue = parseInt(people.value);
-    let tipAmountPerson = (billValue*(percent/100))/peopleValue;
-    tipAmount.innerHTML = `$${parseFloat(tipAmountPerson).toFixed(2)}`
-    
-    let TotalPerson = (billValue + (billValue*(percent/100)))/peopleValue
-    tipTotal.innerHTML = `$${TotalPerson.toFixed(2)}`
-    if (isNaN(tipAmountPerson)) {
+    if(peopleValue == 0) {
         tipAmount.innerHTML = '$0'
-    }
-    if (isNaN(TotalPerson)) {
         tipTotal.innerHTML = '$0'
+    } else {
+        let tipAmountPerson = (billValue*(percent/100))/peopleValue;
+        tipAmount.innerHTML = `$${parseFloat(tipAmountPerson).toFixed(2)}`
+    
+    
+        let TotalPerson = (billValue + (billValue*(percent/100)))/peopleValue
+        tipTotal.innerHTML = `$${TotalPerson.toFixed(2)}`
+        if (isNaN(tipAmountPerson)) {
+            tipAmount.innerHTML = '$0'
+        }
+        if (isNaN(TotalPerson)) {
+            tipTotal.innerHTML = '$0'
+        }
     }
 }
